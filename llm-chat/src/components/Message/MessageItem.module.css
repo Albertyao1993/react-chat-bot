@@ -1,0 +1,167 @@
+.messageContainer {
+  display: flex;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.userMessage {
+  flex-direction: row-reverse;
+}
+
+.assistantMessage {
+  flex-direction: row;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  box-shadow: var(--shadow-2);
+  flex-shrink: 0;
+}
+
+.userAvatar {
+  background-color: var(--primary-main);
+}
+
+.assistantAvatar {
+  background-color: var(--secondary-main);
+}
+
+.messageContent {
+  max-width: 70%;
+  width: fit-content;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.roleName {
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.modelChip {
+  height: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.timestamp {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.messageBubble {
+  padding: 16px;
+  border: 1px solid;
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.userBubble {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  border-radius: 16px 4px 16px 16px;
+}
+
+.assistantBubble {
+  background-color: var(--background-paper);
+  border-color: var(--divider-color);
+  border-radius: 4px 16px 16px 16px;
+}
+
+/* Markdown content styles */
+.markdownContent {
+  max-width: 100%;
+}
+
+.markdownContent pre {
+  background-color: var(--action-hover);
+  padding: 12px;
+  border-radius: 4px;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+.markdownContent code {
+  background-color: var(--action-hover);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdownContent img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.markdownContent a {
+  color: var(--primary-main);
+  text-decoration: none;
+}
+
+.markdownContent a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .messageContainer {
+    padding: 0;
+  }
+  
+  .messageContent {
+    max-width: 80%;
+  }
+  
+  .messageBubble {
+    padding: 12px;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .userIcon {
+    font-size: 14px;
+  }
+  
+  .assistantIcon {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  .messageContainer {
+    padding: 0 8px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .userIcon {
+    font-size: 18px;
+  }
+  
+  .assistantIcon {
+    font-size: 20px;
+  }
+} 

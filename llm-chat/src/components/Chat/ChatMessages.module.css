@@ -1,0 +1,59 @@
+.messagesContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Custom scrollbar */
+.messagesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: var(--background-default);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background: var(--divider-color);
+  border-radius: 4px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--action-hover);
+}
+
+/* Welcome message container */
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  opacity: 0.7;
+  gap: 16px;
+  padding: 32px;
+}
+
+.welcomeTitle {
+  color: var(--text-secondary);
+}
+
+.welcomeText {
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .messagesContainer {
+    padding: 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  .messagesContainer {
+    padding: 16px;
+  }
+} 
